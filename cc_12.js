@@ -48,11 +48,11 @@ addInventoryItem('Smartphone');
 const customerSection=document.getElementById('customerSection');
 customerSection.addEventListener('click',()=>{
     console.log('Customer Section Clicked');
-});
+});//attach click event listener
 const customerCards=document.querySelectorAll('.customer-card');
 customerCards.forEach((card)=>{
     card.addEventListener('click',function(event){
         console.log('Customer Card Selected')
         event.stopPropagation();
-    });
+    });//attach for each cards  
 });
