@@ -18,5 +18,5 @@ const metricCards=document.querySelectorAll('.metric-card');
 const metricCardsArray=[...metricCards];
 metricCardsArray.forEach(card=>{
     card.innerText += ' -Updated';
-    card.computedStyleMap.backgroundColor= 'pink';
 });
+
