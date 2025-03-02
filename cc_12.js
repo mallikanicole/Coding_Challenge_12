@@ -11,3 +11,12 @@ revenueCard.innerHTML=`
 `;//populate card with placeholder $0
 dashboard.appendChild(revenueCard);//apend metric card
 
+
+//Task 2  Updating Dashboard Metrics – Working with NodeLists and Arrays
+
+const metricCards=document.querySelectorAll('.metric-card');
+const metricCardsArray=[...metricCards];
+metricCardsArray.forEach(card=>{
+    card.innerText += ' -Updated';
+    card.computedStyleMap.backgroundColor= 'pink';
+});
