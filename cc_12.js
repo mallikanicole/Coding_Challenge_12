@@ -36,10 +36,9 @@ function addInventoryItem(inventoryName){
 function removeInventoryItem(item){
     const inventoryList=document.getElementById("inventoryList");
     inventoryList.removeChild(item);
-};
-document.getElementById('addItemButton').addEventListener("click",()=>{
+}
     addInventoryItem("New Item")
-});
+
 addInventoryItem('Laptop');
 addInventoryItem('Smartphone');
 
