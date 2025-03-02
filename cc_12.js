@@ -20,3 +20,25 @@ metricCardsArray.forEach(card=>{
     card.innerText += ' -Updated';
 });
 
+
+//Task 3 Dynamic Inventory Management- Adding and removing Items
+
+function addInventoryItem(inventoryName){
+    const inventoryList=document.getElementById('inventoryList');
+    const newInventoryItem=document.createElement('li');
+    newInventoryItem.setAttribute('class','inventory-item');
+    newInventoryItem.innerText=inventoryName;
+    newInventoryItem.addEventListener('click',()=>{
+        removeInventoryItem(newInventoryItem);
+    });
+    inventoryList.appendChild(newInventoryItem);
+};
+function removeInventoryItem(item){
+    const inventoryList=document.getElementById("inventoryList");
+    inventoryList.removeChild(item);
+};
+document.getElementById('addItemButton').addEventListener("click",()=>{
+    addInventoryItem("New Item")
+});
+addInventoryItem('Laptop');
+addInventoryItem('Smartphone');
