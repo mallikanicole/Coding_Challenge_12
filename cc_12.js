@@ -14,24 +14,24 @@ dashboard.appendChild(revenueCard);//apend metric card
 
 //Task 2  Updating Dashboard Metrics – Working with NodeLists and Arrays
 
-const metricCards=document.querySelectorAll('.metric-card');
-const metricCardsArray=[...metricCards];
+const metricCards=document.querySelectorAll('.metric-card');//select elements
+const metricCardsArray=[...metricCards];//convert nodes to array
 metricCardsArray.forEach(card=>{
     card.innerText += ' -Updated';
-});
+});//add -updated to inner text
 
 
 //Task 3 Dynamic Inventory Management- Adding and removing Items
 
 function addInventoryItem(inventoryName){
     const inventoryList=document.getElementById('inventoryList');
-    const newInventoryItem=document.createElement('li');
+    const newInventoryItem=document.createElement('li');//represent product with li
     newInventoryItem.setAttribute('class','inventory-item');
     newInventoryItem.innerText=inventoryName;
     newInventoryItem.addEventListener('click',()=>{
         removeInventoryItem(newInventoryItem);
-    });
-    inventoryList.appendChild(newInventoryItem);
+    });//
+    inventoryList.appendChild(newInventoryItem);//append product item
 };
 function removeInventoryItem(item){
     const inventoryList=document.getElementById("inventoryList");
@@ -42,3 +42,4 @@ document.getElementById('addItemButton').addEventListener("click",()=>{
 });
 addInventoryItem('Laptop');
 addInventoryItem('Smartphone');
+
