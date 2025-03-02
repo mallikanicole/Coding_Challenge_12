@@ -43,3 +43,17 @@ document.getElementById('addItemButton').addEventListener("click",()=>{
 addInventoryItem('Laptop');
 addInventoryItem('Smartphone');
 
+
+//Task 4 Business Customer Section- Handling Event Bubbling
+
+const customerSection=document.getElementById('customerSection');
+customerSection.addEventListener('click',()=>{
+    console.log('Customer Section Clicked');
+});
+const customerCards=document.querySelectorAll('.customer-card');
+customerCards.forEach((card)=>{
+    card.addEventListener('click',function(event){
+        console.log('Customer Card Selected')
+        event.stopPropagation();
+    });
+});
